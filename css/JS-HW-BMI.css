@@ -1,0 +1,354 @@
+/*css reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*自訂css reset*/
+img{
+	max-width: 100%;
+	height: auto;
+}
+a{
+	text-decoration: none;
+}
+*, *:before, *:after{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+*:focus{
+	outline: none;
+}
+
+/*自訂css開始*/
+/*BMItest css*/
+.BMIheader{
+	width: 100%;
+	height: 300px;
+	background-color: #424242;
+
+}
+.BMItest{
+	width: 1024px;
+	height: 300px;
+	margin: 0 auto;
+	font-family: 微軟正黑體;
+	font-weight: bold;
+}
+.BMItest h1{
+	float: left;
+	width: 117px;
+	height: 117px;
+	background-image: url("../img/BMICLogo.png");
+	margin: 92px 97px 0 173px;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.input{
+	float: left;
+	display: flex;
+	flex-direction: column;
+	margin: 74px 53px 0 0;
+}
+label{
+	margin-bottom: 7px;
+	font-size: 18px;
+	color: #FFD366;
+}
+#heightId{
+	margin-bottom: 23px;
+}
+.input input{
+	width: 250px;
+	height: 40px;
+	border: 2px solid #FFD366;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.18);
+	padding: 0 16px;
+	font-size: 24px;
+	color: rgba(255,255,255,0.50);
+	line-height: 36px;
+}
+ /*placeholder css 調整開始*/
+.input input::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: rgba(255,255,255,0.50); 
+} 
+.input input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color: rgba(255,255,255,0.50); 
+} 
+.input input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color: rgba(255,255,255,0.50); 
+} 
+.input input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: rgba(255,255,255,0.50); 
+} 
+ /*placeholder css 調整結束*/
+#btnId{
+	float: left;
+	width: 120px;
+	height: 120px;
+	margin-top: 92px;
+	border-radius: 60px;
+	border: none;
+	background: #FFD366;
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: bold;
+	color: #424242;
+}
+#btnId:hover{
+	box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+}
+#btnId:active{
+	background: #DEA921;
+	box-shadow: none;
+}
+.btnhidden{
+	background: #424242 !important; 
+}
+#resultbox{
+	float: left;
+	width: 212px;
+	height: 130px;
+	transform: translateX(-125px)
+}
+.result{
+	float: left;
+	width: 130px;
+	height: 130px;
+	margin: 87px 18px 0 0;
+	border-radius: 65px;
+	font-family: 微軟正黑體;
+	font-weight: bold;
+	position: relative;
+}
+.blueborder{
+	border: 6px solid #31BAF9;
+}
+.bluecolor{
+	color: #31BAF9;
+}
+.greenborder{
+	border: 6px solid #86D73E;
+}
+.greencolor{
+	color: #86D73E;
+}
+.orangeborder1{
+	border: 6px solid #FF982D;
+}
+.orangecolor1{
+	color: #FF982D;
+}
+.orangeborder2{
+	border: 6px solid #FF6C02;
+}
+.orangecolor2{
+	color: #FF6C02;
+}
+.BMIvalue{
+	font-size: 32px;
+	position: absolute;
+	top: 41px;
+	left: 18px;
+}
+.subtitled{
+	font-size: 14px;
+	position: absolute;
+	top: 77px;
+	left: 46px;
+}
+.result a{
+	width: 36px;
+	height: 36px;
+	border: 3px solid #424242;
+	border-radius: 18px;
+	background-image: url("../img/icons_loop.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	position: absolute;
+	top: 82px;
+	left: 88px;
+}
+.result a:hover{
+	border: 3px solid #f5f5f5;
+}
+.result a:active{
+	transform: translateY(4px);
+}
+.bluebackground{
+	background-color: #31BAF9;
+}
+.greenbackground{
+	background-color: #86D73F;
+}
+.orangebackground1{
+	background-color: #FF982D;
+}
+.orangebackground2{
+	background-color: #FF6C02;
+}
+#BMItype{
+	float: left;
+	margin-top: 137px;
+	font-size: 32px;
+}
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/*BMIrecord css*/
+.BMIrecord{
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+	padding: 48px 0 58px 0;
+	background-color: #f5f5f5;
+}
+.BMIrecord p{
+	font-family: 微軟正黑體;
+	font-size: 24px;
+	font-weight: bold;
+	color: #424242;
+	margin-bottom: 36px;
+}
+.BMIrecord li{
+	display: flex;
+	align-items: center;
+	font-family: 微軟正黑體;
+	background-color: #fff;
+	margin-bottom: 16px;
+}
+.BMIrecord div{
+	width: 7px;
+	height: 62px;
+	margin-right: 12px;
+}
+.blue{
+	background: #31BAF9;
+	box-shadow: 2px 0 3px 0 rgba(49,186,249,0.29);
+}
+.green{
+	background: #86D73F;
+	box-shadow: 2px 0 3px 0 rgba(133,215,63,0.29);
+}
+.orange1{
+	background: #FF982D;
+	box-shadow: 2px 0 3px 0 rgba(255,152,45,0.29)
+}
+.orange2{
+	background: #FF6C02;
+	box-shadow: 2px 0 3px 0 rgba(255,108,2,0.29);
+}
+.BMItype{
+	font-size: 20px;
+	color: #4A4A4A;
+	font-weight: bold;
+	margin-right: 70px;
+}
+.title{
+	font-size: 12px;
+	color: #424242;
+	margin-right: 7px;
+}
+.value{
+	font-size: 20px;
+	color: #4A4A4A;
+	font-weight: bold;
+	margin-right: 42px;
+}
+.time{
+	font-size: 12px;
+	color: #424242;
+	margin: 0 10px;
+}
+.BMIrecord a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 36px;
+	border: 2px solid #726b6b;
+	border-radius: 7px;
+	margin: 0 10px 0 50px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #726b6b;
+}
+.BMIrecord a:hover{
+	color: #fff;
+	background-color: #726b6b;
+}
+.BMIrecord a:active{
+	transform: translateY(5px);
+}
+
+
+/*footer css*/
+.footer{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background: #FFD366;
+}
+.footericon{
+	height: 70px;
+	width: 70px;
+	margin: 18px 0;
+	overflow: hidden;
+}
+.footer img{
+	position: relative;
+  left: -70px;
+  -webkit-filter: drop-shadow(70px 0 #424242);
+  filter: drop-shadow(70px 0 #424242);   
+}
